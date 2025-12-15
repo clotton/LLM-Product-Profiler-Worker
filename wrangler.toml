@@ -1,0 +1,33 @@
+name = "llm-product-profiler-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Account ID (update with your Cloudflare account ID)
+# account_id = "your-account-id"
+
+# Workers AI binding (if needed in future)
+# [ai]
+# binding = "AI"
+
+# Environment variables (set using wrangler secret)
+# DO NOT put actual secrets in this file
+# Use: wrangler secret put AZURE_OPENAI_KEY
+# Use: wrangler secret put AZURE_OPENAI_ENDPOINT
+# Use: wrangler secret put AZURE_OPENAI_MODEL
+
+# Non-secret environment variables can go here
+[vars]
+AZURE_OPENAI_API_VERSION = "2024-08-01-preview"
+
+# Development settings
+[env.development]
+name = "llm-product-profiler-worker-dev"
+
+# Production settings
+[env.production]
+name = "llm-product-profiler-worker"
+routes = [
+  # Add your custom domain routes here
+  # { pattern = "api.yoursite.com/*", zone_name = "yoursite.com" }
+]
+

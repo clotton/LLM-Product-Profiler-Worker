@@ -1,0 +1,9 @@
+# Local development environment variables
+# Copy this file to .dev.vars for local testing
+# DO NOT commit .dev.vars to git
+
+AZURE_OPENAI_KEY=your-azure-openai-api-key-here
+AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
+AZURE_OPENAI_MODEL=gpt-4.1
+AZURE_OPENAI_API_VERSION=2024-08-01-preview
+
